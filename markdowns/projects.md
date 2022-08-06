@@ -1,6 +1,6 @@
 [osh ~]% telnet projects.talonfox.sh  
 Trying 255.255.255.255...  
-Connected to about.talonfox.sh  
+Connected to projects.talonfox.sh  
 Escape character is '^]'  
 ```
  ▄▄▄·▄▄▄         ▐▄▄▄▄▄▄ . ▄▄· ▄▄▄▄▄.▄▄ · 
