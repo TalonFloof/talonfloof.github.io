@@ -33,7 +33,7 @@
             }
             a:hover {
                 cursor: pointer;
-                color: #04AA6D;
+                color: #099ce0;
             }
             #banner {
                 backdrop-filter: blur(64px);
@@ -141,10 +141,8 @@
                 align-items: center;
             }
         </style>
-        <script>
-            // I really didn't want to add this but I have no other option...
-            if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(true){if(navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Safari") === -1) { let headTitle = document.querySelector('head'); let setFavicon = document.createElement('link'); setFavicon.setAttribute('rel', "shortcut icon"); setFavicon.setAttribute('href', "NebulaFox.gif"); headTitle.appendChild(setFavicon); } else { let headTitle = document.querySelector('head'); let setFavicon = document.createElement('link'); setFavicon.setAttribute('rel', "shortcut icon"); setFavicon.setAttribute('href', "Fox.svg"); headTitle.appendChild(setFavicon);}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="data:text/javascript;base64,aWYobmF2aWdhdG9yLnVzZXJBZ2VudC5pbmRleE9mKCJGaXJlZm94IikgIT09IC0xICYmIG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZigiQ2hyb21lIikgPT09IC0xICYmIG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZigiU2FmYXJpIikgPT09IC0xKSB7IGxldCBoZWFkVGl0bGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdoZWFkJyk7IGxldCBzZXRGYXZpY29uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnbGluaycpOyBzZXRGYXZpY29uLnNldEF0dHJpYnV0ZSgncmVsJywgInNob3J0Y3V0IGljb24iKTsgc2V0RmF2aWNvbi5zZXRBdHRyaWJ1dGUoJ2hyZWYnLCAiTmVidWxhRm94LmdpZiIpOyBoZWFkVGl0bGUuYXBwZW5kQ2hpbGQoc2V0RmF2aWNvbik7IH0gZWxzZSB7IGxldCBoZWFkVGl0bGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdoZWFkJyk7IGxldCBzZXRGYXZpY29uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnbGluaycpOyBzZXRGYXZpY29uLnNldEF0dHJpYnV0ZSgncmVsJywgInNob3J0Y3V0IGljb24iKTsgc2V0RmF2aWNvbi5zZXRBdHRyaWJ1dGUoJ2hyZWYnLCAiRm94LnN2ZyIpOyBoZWFkVGl0bGUuYXBwZW5kQ2hpbGQoc2V0RmF2aWNvbik7fQ=="></script>
     </head>
     <body>
         <div id="banner">
@@ -152,11 +150,11 @@
                 <h2 id="banner-title">
                     <!--[if !IE]><!--><img id="banner-icon-firefox" src="NebulaFox.gif"><!--<![endif]-->
                     <img id="banner-icon" src="Fox.svg" height="50px">
-                    <a href="#main_page">TalonFox</a>
+                    <a href="javascript:TalonFoxLinkEvent(this);">TalonFox</a>
                 </h2>
                 <div id="banner-spacer"></div>
                 <ul id="banner-items">
-                    <ui><a href="javascript:void(0)">Projects</a></ui>
+                    <ui><a href="javascript:ProjectsLinkEvent(this);">Projects</a></ui>
                     <ui><a href="https://github.com/Talon396">GitHub</a></ui>
                 </ul>
             </div>
@@ -164,30 +162,35 @@
         <div class="window" id="main_page">
             <span>
                 <p>
-                [osh ~]% telnet about.talonfox.sh<br>
-                Trying 255.255.255.255...<br>
-                Connected to about.talonfox.sh<br>
-                Escape character is '^]'<br>
-                </p>
-                <code style="font-family: 'Fira Mono', monospace; font-size: 105%;">
-▄▄▄▄▄▄&nbsp▄▄▄·&nbsp▄▄▌&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp▐&nbsp▄&nbsp·▄▄▄&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp▐▄•&nbsp▄&nbsp<br>
-▀•██&nbsp▀▐█&nbsp▀█&nbsp██•&nbsp&nbsp&nbsp▄█▀▄&nbsp•█▌▐██&nbsp&nbsp·&nbsp▄█▀▄&nbsp&nbsp█▌█▌▪<br>
-&nbsp&nbsp▐█.▪▄█▀▀█&nbsp██&nbsp▪&nbsp▐█▌.▐▌▐█▐▐▌█▀▀▪▐█▌.▐▌&nbsp·██·&nbsp<br>
-&nbsp&nbsp▐█▌·▐█▪&nbsp▐▌▐█▌&nbsp▄▐█▌.▐▌██▐█▌██&nbsp.▐█▌.▐▌▪▐█·█▌<br>
-&nbsp&nbsp▀▀▀&nbsp&nbsp▀&nbsp&nbsp▀&nbsp.▀▀▀&nbsp&nbsp▀█▄▀▪▀▀&nbsp█▪▀▀▀&nbsp&nbsp▀█▄▀▪•▀▀&nbsp▀▀<br>
-                </code>
-                <p>
-                Hello! I'm TalonFox (aka Talon396)<br>
-                I mostly code stuff in the Rust Programming Language. I enjoy writing baremetal programs and making small operating systems.<br>
-                This is my personal website, I don't really have much on here, but I think I did a good job on it.<br>
-                This website works WITHOUT JAVASCRIPT (Because real programmers use HTML5/CSS3)<br>
-                </p>
-                <p>
-                <br>
-                Connection closed.<br>
-                [osh ~]%&nbsp<span class="terminal_cursor"></span><br>
+                Hello! You appear to have JavaScript disabled.<br>
+                In order for this website to properly render, please enable it!<span class="terminal_cursor"></span>
                 </p>
             </span>
         </div>
+        <script>
+            function renderMarkdown(url) {
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    var element = document.getElementById("main_page");
+                    if(req.readyState == 4 && req.status == 200) {
+                        var md = new markdownit({html: true, linkify: false,typographer: true});
+                        element.innerHTML = "<span>"+md.render(req.responseText)+"</span>";
+                        delete md;
+                    } else {
+                        element.innerHTML = "<span>Failed to load Markdown file!<br>Status Code: "+req.status+"<span class=\"terminal_cursor\"></span></span>";
+                    }
+                    delete element;
+                }
+                req.open("GET", url, true);
+                req.send();
+            }
+            renderMarkdown("/markdowns/mainpage.md");
+            function TalonFoxLinkEvent(element) {
+                renderMarkdown("/markdowns/mainpage.md");
+            };
+            function ProjectsLinkEvent(element) {
+                renderMarkdown("/markdowns/projects.md");
+            };
+        </script>
     </body>
 </html>
