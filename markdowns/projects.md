@@ -10,10 +10,11 @@ Escape character is '^]'
 .▀   .▀  ▀ ▀█▄▀▪ ▀▀▀• ▀▀▀ ·▀▀▀  ▀▀▀  ▀▀▀▀ 
 ```
 ## Currently Available
+- [🐦 Ravenstone](https://github.com/Talon396/owlOS) Computers in Minecraft
 - [🦉 owlOS](https://github.com/Talon396/owlOS) UNIX-like Hobby Operating System written in Rust
 - [🐺 WolfBox](https://github.com/Talon396/WolfBox) Fantasy Computer inspired by 80s UNIX Workstations
 ## Currently Working On
-I'm currently working on a Minecraft Mod that adds MOS Technology 6502-based Computers.
+Ravenstone
 <br>
 
 Connection closed.  
