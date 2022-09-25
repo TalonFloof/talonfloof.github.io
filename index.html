@@ -2,9 +2,9 @@
 <html class="dark">
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Talon396">
+        <meta name="author" content="TalonFox">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Page containing information about GitHub Developer: Talon396.">
+        <meta name="description" content="Page containing information about GitHub Developer: TalonFox.">
         <title>TalonFox</title>
         <style>
             @font-face { font-family: '04b_03'; src: url('04b_03.ttf'); } 
@@ -154,6 +154,7 @@
                 </h2>
                 <div id="banner-spacer"></div>
                 <ul id="banner-items">
+                    <!--<ui><a href="owlos">owlOS</a></ui>>-->
                     <ui><a href="javascript:ProjectsLinkEvent(this);">Projects</a></ui>
                     <ui><a href="https://github.com/Talon396">GitHub</a></ui>
                 </ul>
@@ -176,7 +177,7 @@
                         var md = new markdownit({html: true, linkify: false,typographer: true});
                         element.innerHTML = "<span>"+md.render(req.responseText)+"</span>";
                         delete md;
-                    } else {
+                    } else if(req.readyState == 4 && req.status != 200) {
                         element.innerHTML = "<span>Failed to load Markdown file!<br>Status Code: "+req.status+"<span class=\"terminal_cursor\"></span></span>";
                     }
                     delete element;
