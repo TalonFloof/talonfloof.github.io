@@ -169,6 +169,15 @@
             </span>
         </div>
         <script>
+            let isMobileDevice = (/android|iphone|kindle|ipad/i).test(navigator.userAgent);
+            if(isMobileDevice) {
+                var windows = document.getElementsByClassName("window");
+                for(var i=0; i < windows.length; i++) {
+                    windows.item(i).style.width = "75%"
+                    windows.item(i).style.height = "80%"
+                }
+            }
+
             function renderMarkdown(url) {
                 var req = new XMLHttpRequest();
                 req.onreadystatechange = function() {
