@@ -16,3 +16,5 @@ This is my personal website, I don't really have much on here, but I think I did
 
 Connection closed.  
 [osh ~]% <span class="terminal_cursor"></span>
+
+[<img src="getfirefox.gif">](https://getfirefox.com)
