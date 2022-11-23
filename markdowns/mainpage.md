@@ -1,8 +1,4 @@
-[osh ~]% telnet about.talonfox.sh  
-Trying 255.255.255.255...  
-Connected to about.talonfox.sh  
-Escape character is '^]'  
-```
+ ```
 ▄▄▄▄▄▄ ▄▄▄· ▄▄▌         ▐ ▄ ·▄▄▄      ▐▄• ▄ 
 ▀•██ ▀▐█ ▀█ ██•   ▄█▀▄ •█▌▐██  · ▄█▀▄  █▌█▌▪
   ▐█.▪▄█▀▀█ ██ ▪ ▐█▌.▐▌▐█▐▐▌█▀▀▪▐█▌.▐▌ ·██· 
@@ -14,7 +10,4 @@ I mostly code stuff in Rust, Java, and Kotlin (though I know more languages). I 
 This is my personal website, I don't really have much on here, but I think I did a good job on it.   
 <br>
 
-Connection closed.  
-[osh ~]% <span class="terminal_cursor"></span>
-
-[<img src="getfirefox.gif">](https://getfirefox.com) <img src="archlinux.svg">
+[<img src="getfirefox.gif">](https://getfirefox.com) [<img src="archlinux.svg">](https://archlinux.org/)
