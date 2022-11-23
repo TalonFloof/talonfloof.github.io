@@ -77,15 +77,7 @@
                 padding: 0px;
                 vertical-align: middle !important;
                 height: 50px;
-            }
-            #banner-icon-firefox {
-                margin: 0px;
-                border: 0px;
-                padding: 0px;
-                vertical-align: middle !important;
-                height: 64px;
-                display: none;
-                image-rendering: crisp-edges;
+                border-radius: 50%;
             }
             .window {
                 margin: 0px;
@@ -129,14 +121,6 @@
                 animation-iteration-count: infinite;
                 animation-direction: forwards;
             }
-            @-moz-document url-prefix() { 
-                #banner-icon {
-                    display: none;
-                }
-                #banner-icon-firefox {
-                    display: unset;
-                }
-            }
             #banner-items {
                 align-items: center;
             }
@@ -148,14 +132,13 @@
         <div id="banner">
             <div id="banner-inner">
                 <h2 id="banner-title">
-                    <!--[if !IE]><!--><img id="banner-icon-firefox" src="NebulaFox.gif"><!--<![endif]-->
-                    <img id="banner-icon" src="Fox.svg" height="50px">
-                    <a href="javascript:TalonFoxLinkEvent(this);">TalonFox</a>
+                    <img id="banner-icon" src="current_avatar.png" height="50px">
+                    <a href="javascript:renderMarkdown('/markdowns/mainpage.md');">&nbsp;TalonFox</a>
                 </h2>
                 <div id="banner-spacer"></div>
                 <ul id="banner-items">
-                    <!--<ui><a href="owlos">owlOS</a></ui>>-->
-                    <ui><a href="javascript:ProjectsLinkEvent(this);">Projects</a></ui>
+                    <ui><a href="zorro-os">zorroOS</a></ui>
+                    <ui><a href="javascript:renderMarkdown('/markdowns/projects.md');">Projects</a></ui>
                     <ui><a href="https://github.com/Talon396">GitHub</a></ui>
                 </ul>
             </div>
@@ -186,12 +169,6 @@
                 req.send();
             }
             renderMarkdown("/markdowns/mainpage.md");
-            function TalonFoxLinkEvent(element) {
-                renderMarkdown("/markdowns/mainpage.md");
-            };
-            function ProjectsLinkEvent(element) {
-                renderMarkdown("/markdowns/projects.md");
-            };
         </script>
     </body>
 </html>
