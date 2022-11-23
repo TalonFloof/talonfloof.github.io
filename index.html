@@ -165,7 +165,7 @@
                     }
                     delete element;
                 }
-                req.open("GET", url, true);
+                req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
                 req.send();
             }
             renderMarkdown("/markdowns/mainpage.md");
