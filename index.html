@@ -1,174 +1,171 @@
 <!DOCTYPE html>
-<html class="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="TalonFox">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Page containing information about GitHub Developer: TalonFox.">
-        <title>TalonFox</title>
-        <style>
-            @font-face { font-family: '04b_03'; src: url('04b_03.ttf'); } 
-            * {
-                box-sizing: border-box;
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="TalonFox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meeeeeeee :3">
+    <title>TalonFox</title>
+    <style>
+        @font-face {
+            font-family: "Unifont";
+            src: url('unifont-compact.otf');
+        }
+
+        body {
+            height: 100%;
+            background-color: #1e1e2e;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: rgb(255, 255, 255);
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        pre {
+            font-family: "Unifont", monospace;
+            font-size: 16px;
+            font-smooth: never;
+            -webkit-font-smoothing: none;
+            white-space: -moz-pre-wrap;
+            white-space: -o-pre-wrap;
+            white-space: pre-wrap;
+        }
+
+        #terminal {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+        }
+
+        @keyframes cursor_fade_in {
+            0% {
+                background-color: #1e1e2e;
             }
-            body, html {
-                height: 100%;
-                margin: 0px;
+
+            100% {
+                background-color: white;
             }
-            body {
-                background-image: url("Leaves.jpg");
-                background-position: 0%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: #0f172a;
-                color: #cbd5e1;
-                z-index: 0;
-                font-family: '04b_03', monospace;
-                text-shadow: 0px 4px #00000040;
-            }
-            a {
-                text-decoration: none;
-                color: #cbd5e1;
-            }
-            a:hover {
-                cursor: pointer;
-                color: #099ce0;
-            }
-            #banner {
-                backdrop-filter: blur(64px);
-                background-color: #0f172a80;
-                position: fixed;
-                z-index: 1;
-                top: 0%;
-                left: 0%;
-                width: 100%;
-                overflow: hidden;
-                padding: 8px;
-                padding-left: 32px !important;
-                padding-right: 32px !important;
-                border-bottom-left-radius: 32px;
-                border-bottom-right-radius: 32px;
-            }
-            #banner-inner {
-                display: flex;
-                font-weight: 100;
-                overflow: hidden;
-                flex-wrap: nowrap !important;
-                align-items: center;
-            }
-            #banner-spacer {
-                display: hidden;
-                position: relative;
-                display: flex;
-                align-items: center;
-                margin-left: auto;
-            }
-            #banner-title {
-                align-items: center;
-                margin: 0px;
-                padding: 0px;
-                border: 0px;
-                display: flex;
-            }
-            #banner-icon {
-                margin: 0px;
-                border: 0px;
-                padding: 0px;
-                vertical-align: middle !important;
-                height: 50px;
-                border-radius: 50%;
-            }
-            .window {
-                margin: 0px;
-                border: 0px;
-                padding: 8px;
-                position: absolute;
-                left: 50%;
-                top: 75%;
-                width: 80%;
-                height: 80%;
-                padding-bottom: 35%;
-                transform: translate(-50%, -75%);
-                backdrop-filter: blur(48px);
-                background-color: #08080890;
-                color: #00d187;
-                z-index: 2;
-                border-radius: 32px;
-                border-radius: 32px;
-                display: flex !important;
-                overflow: auto !important;
-            }
-            @keyframes cursor_blink {
-                0% {background-color: #00d18700; box-shadow: 0px 4px #00000000;}
-                10% {background-color: #00d187ff; box-shadow: 0px 4px #00000040;}
-                50% {background-color: #00d187ff; box-shadow: 0px 4px #00000040;}
-                75% {background-color: #00d18700; box-shadow: 0px 4px #00000000;}
-                100% {background-color: #00d18700; box-shadow: 0px 4px #00000000;}
-            }
-            .terminal_cursor {
-                margin: 0px;
-                border: 0px;
-                padding: 0px;
-                width: 12px;
-                height: 12px;
-                background-color: #00d187;
-                display: inline-block;
-                animation-name: cursor_blink;
-                animation-duration: 1s;
-                animation-timing-function: linear;
-                animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-direction: forwards;
-            }
-            #banner-items {
-                align-items: center;
-            }
-        </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="data:text/javascript;base64,aWYobmF2aWdhdG9yLnVzZXJBZ2VudC5pbmRleE9mKCJGaXJlZm94IikgIT09IC0xICYmIG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZigiQ2hyb21lIikgPT09IC0xICYmIG5hdmlnYXRvci51c2VyQWdlbnQuaW5kZXhPZigiU2FmYXJpIikgPT09IC0xKSB7IGxldCBoZWFkVGl0bGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdoZWFkJyk7IGxldCBzZXRGYXZpY29uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnbGluaycpOyBzZXRGYXZpY29uLnNldEF0dHJpYnV0ZSgncmVsJywgInNob3J0Y3V0IGljb24iKTsgc2V0RmF2aWNvbi5zZXRBdHRyaWJ1dGUoJ2hyZWYnLCAiTmVidWxhRm94LmdpZiIpOyBoZWFkVGl0bGUuYXBwZW5kQ2hpbGQoc2V0RmF2aWNvbik7IH0gZWxzZSB7IGxldCBoZWFkVGl0bGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdoZWFkJyk7IGxldCBzZXRGYXZpY29uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnbGluaycpOyBzZXRGYXZpY29uLnNldEF0dHJpYnV0ZSgncmVsJywgInNob3J0Y3V0IGljb24iKTsgc2V0RmF2aWNvbi5zZXRBdHRyaWJ1dGUoJ2hyZWYnLCAiRm94LnN2ZyIpOyBoZWFkVGl0bGUuYXBwZW5kQ2hpbGQoc2V0RmF2aWNvbik7fQ=="></script>
-    </head>
-    <body>
-        <div id="banner">
-            <div id="banner-inner">
-                <h2 id="banner-title">
-                    <img id="banner-icon" src="current_avatar.png" height="50px">
-                    <a href="javascript:renderMarkdown('/markdowns/mainpage.md');">&nbsp;TalonFox</a>
-                </h2>
-                <div id="banner-spacer"></div>
-                <ul id="banner-items">
-                    <ui><a href="zorro-os">zorroOS</a></ui>
-                    <ui><a href="javascript:renderMarkdown('/markdowns/projects.md');">Projects</a></ui>
-                    <ui><a href="https://github.com/Talon396">GitHub</a></ui>
-                </ul>
-            </div>
-        </div>
-        <div class="window" id="main_page">
-            <span>
-                <p>
-                Hello! You appear to have JavaScript disabled.<br>
-                In order for this website to properly render, please enable it!<span class="terminal_cursor"></span>
-                </p>
-            </span>
-        </div>
-        <script>
-            function renderMarkdown(url) {
-                var req = new XMLHttpRequest();
-                req.onreadystatechange = function() {
-                    var element = document.getElementById("main_page");
-                    if(req.readyState == 4 && req.status == 200) {
-                        var md = new markdownit({html: true, linkify: false,typographer: true});
-                        element.innerHTML = "<span>"+md.render(req.responseText)+"</span>";
-                        delete md;
-                    } else if(req.readyState == 4 && req.status != 200) {
-                        element.innerHTML = "<span>Failed to load Markdown file!<br>Status Code: "+req.status+"<span class=\"terminal_cursor\"></span></span>";
-                    }
-                    delete element;
+        }
+
+        #cursor {
+            width: 8px;
+            height: 16px;
+            margin: 0px;
+            padding: 0px;
+            color: rgba(0, 0, 0, 0);
+            animation-name: cursor_fade_in;
+            animation-duration: 1.7s;
+            animation-delay: 0.7s;
+            animation-fill-mode: forwards;
+        }
+
+        a {
+            color: #99dbc0;
+        }
+    </style>
+</head>
+
+<body>
+    <pre id="terminal"><noscript>No Javascript?</noscript><span id="da-target"></span><span id="cursor">_</span></pre>
+    <script>
+        randomMessages = [
+            "A curved, pointed appendage found at the end of the toes on most birds",
+            "A Foxoholic",
+            "Your local neighborhood fox coder :3",
+            "Talon",
+            "The name of a mailgun library for extracting message quotations and signatures",
+            "The name of an old videogame company which ceased operations in 2002",
+            "Your worst nightmare (jk lol)",
+            "The FitnessGram pacer test is a multi-stage aerobic capacity test that progressively gets more difficult as it continues",
+            "The MIPS enthusiast",
+            "A fox who bangs their face on a keyboard and somehow manages to get stuff working",
+            "#include <stdio.h> void main() {printf(\"TalonFox\\n\");}",
+            "The guy who has a \"pseudo-nostalga\" for old tech",
+            "A fox who can also draw a little bit",
+            "The name of an American news website which was established in April of 2003",
+            "An avid UNIX user",
+            "The fox who can't leave his website along for 5 seconds without wanting to rewrite it completely",
+            "Oh no! My humor! Its broken!",
+            "The first of his name",
+            "Someone who's probably overqualified for most jobs rn",
+            "Average GNU Unifont user",
+            "An Average Arch Linux user"
+        ]
+        currentInterval = 0;
+        function wait(timefn, value) {
+            currentInterval += value;
+            setTimeout(timefn, currentInterval);
+        }
+        var target = document.getElementById("da-target");
+        function illPutThisWithTheOtherFire() {
+            return target.appendChild(document.createElement("span"));
+        }
+        var i = 0;
+        function slowWrite(text, time) {
+            i = 0;
+            handle = setInterval(function (txt) {
+                i++;
+                if (i > txt.length) {
+                    target = illPutThisWithTheOtherFire();
+                    clearInterval(handle);
+                    return;
+                } else {
+                    target.textContent = txt.slice(0, i);
                 }
-                req.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
-                req.send();
-            }
-            renderMarkdown("/markdowns/mainpage.md");
-        </script>
-    </body>
+            }, time, text);
+        }
+        function RANDOMMESSAGETIME() {
+            i = 0;
+            handle = setInterval(function () {
+                if (i >= (60 * 4)) {
+                    target = illPutThisWithTheOtherFire();
+                    clearInterval(handle);
+                    return;
+                }
+                i++;
+                target.textContent = randomMessages[Math.random() * randomMessages.length | 0] + "\"";
+            }, 1 / 60);
+        }
+        function addLink(url, name) {
+            var element = target.appendChild(document.createElement("a"));
+            element.href = url;
+            element.textContent = name;
+            target = illPutThisWithTheOtherFire();
+        }
+        wait(function () { slowWrite("Hello there fellow traveler on the internet, it is nice to meet you.\n\n", 50); }, 2000);
+        // 5350
+        wait(function () { }, 4350 - 700);
+        wait(function () { slowWrite("I am TalonFox, also known as \"", 50); }, 1000);
+        // 1500
+        wait(RANDOMMESSAGETIME, 1600);
+        wait(function () { slowWrite("\n\nI'm an enthusiast of anything related to Computer Science and Computer Engineering.\nI especially like baremetal programming!\n\n", 50); }, 1200);
+        // 6400
+        wait(function () { slowWrite("If your still curious about me, you can find me on these places:\n", 50); }, 6500);
+        // 3250
+        wait(function () { slowWrite("    GitHub   -  ", 50); }, 3350);
+        // 750
+        wait(function () { addLink("https://github.com/TalonFox", "TalonFox\n"); }, 850);
+        wait(function () { slowWrite("    Discord  -  TalonFox#3593\n", 50); }, 200);
+        // 1500
+        wait(function () { slowWrite("\nThanks for visiting my website :3", 50); }, 1600);
+        // 1700
+        wait(function () { slowWrite("\n\nWhile your at it, you should also check out ", 50); }, 1700 + 2000);
+        wait(function () { addLink("https://github.com/ry755", "ry"); }, 2400);
+        wait(function () { slowWrite(", ", 50); }, 50);
+        wait(function () { addLink("https://github.com/hyenasky", "hyenasky"); }, 150);
+        wait(function () { slowWrite(", and ", 50); }, 50);
+        wait(function () { addLink("https://github.com/theverygaming", "theverygaming"); }, 8 * 50);
+        wait(function () { slowWrite(" on GitHub as well, they're pretty cool too and have helped me out A LOT with the OkamiStation project.", 50); }, 50);
+        console.log("i see your a little curious on how this site works huh?");
+        console.log("that's pretty cool, it took a while to make this.");
+        console.log("i was inspired by luafox's website, and i oriented my design around hers");
+        console.log("hopefully this site will be more complete soon (maybe if i ever work on my sona i can put a ref image here)");
+        console.log("anyways, thanks for visiting :3");
+    </script>
+</body>
+
 </html>
