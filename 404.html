@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="TalonFox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meeeeeeee :3">
+    <title>TalonFox (404)</title>
+    <style>
+        @font-face {
+            font-family: "Unifont";
+            src: url('unifont-compact.otf');
+        }
+
+        body {
+            height: 100%;
+            background-color: #1e1e2e;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: rgb(255, 255, 255);
+            font-family: "Unifont", monospace;
+            font-size: 32px;
+            font-smooth: never;
+            -webkit-font-smoothing: none;
+
+        }
+
+        #box {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            vertical-align: bottom;
+            background-repeat: no-repeat;
+            background-image: url("assets/404.png");
+            width: 365px;
+            height: 365px;
+        }
+
+        #label {
+            display: inline-block;
+            position: absolute;
+            top: 101%;
+            z-index: 5;
+        }
+
+        img {
+            float: left;
+            padding: 20px;
+            margin: -10px;
+            backdrop-filter: blur(15px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <span id="label">404 - Page not Found</span><img src="assets/404.png" width="384px">
+
+    </div>
+</body>
+
+</html>
