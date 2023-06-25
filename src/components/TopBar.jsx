@@ -8,7 +8,7 @@ export default function Navbar(properties) {
       <nav className="flex justify-between items-center m-5">
         <Link
           to="/"
-          className="flex gap-3 text-lg font-bold items-center dark:text-talon-lightbg text-talon-darkbg transition-colors ease-in-out duration-200"
+          className="select-none flex gap-3 text-lg font-bold items-center dark:text-talon-lightbg text-talon-darkbg transition-colors ease-in-out duration-200"
         >
           TalonFox
         </Link>

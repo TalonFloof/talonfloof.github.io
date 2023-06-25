@@ -9,9 +9,14 @@ export default function PageNotFound(properties) {
                 <TopBar {...properties} />
             </div>
             <main className="flex flex-col justify-center items-center min-h-screen gap-0 animate-fade-from-bottom">
+                <section className="relative group">
                 <h1 
-                className="font-unifont text-[20rem] text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-700"
+                className="select-none absolute inset-0 blur-xl font-unifont text-[15rem] md:text-[20rem] text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-700 animate-light-flicker"
                 >404</h1>
+                <h1 
+                className="font-unifont text-[15rem] md:text-[20rem] text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-700"
+                >404</h1>
+                </section>
                 <div className="relative -translate-y-20 flex flex-col justify-center items-center gap-3">
                 <p className="font-bold cursor-default text-talon-darkbg dark:text-talon-lightbg">Page not found</p>
                 <Link
