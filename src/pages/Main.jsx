@@ -1,19 +1,8 @@
 import TopBar from "../components/TopBar";
 import { Link } from "react-router-dom";
 import Meeeee from "../assets/meeeee.png";
-import { useEffect, useState } from "react";
 
 export default function Main(props) {
-  const [matches, setMatches] = useState(
-    window.matchMedia("(min-width: 768px)").matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia("(min-width: 768px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
-  }, []);
-
   return (
     <>
       <TopBar />
