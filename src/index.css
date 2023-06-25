@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Unifont";
-  src: url('public/unifont-compact.otf');
+  src: url('/unifont-compact.otf');
 }
 
 * {
