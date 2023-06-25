@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Main from "./pages/Main";
+import PageNotFound from "./pages/PageNotFound";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Main toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>} />
+        <Route path="*" element={<PageNotFound toggleDarkMode={toggleDarkMode} darkMode={darkMode} />} />
       </Routes>
     </>
   );

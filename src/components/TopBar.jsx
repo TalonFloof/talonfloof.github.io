@@ -15,7 +15,6 @@ export default function Navbar(properties) {
         <ul className="flex items-center gap-4">
           <button
             onClick={() => toggleDarkMode()}
-            id="theme-switch-button"
             className={darkMode ? "transition ease-in-out duration-200 rotate-0"
               : "transition ease-in-out duration-200 rotate-180"}
           >
