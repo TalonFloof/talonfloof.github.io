@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
-  document.title = "TalonFox's Website";
   return (
     <>
       <nav className="flex justify-between items-center m-5">
