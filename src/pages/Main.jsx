@@ -17,7 +17,7 @@ export default function Main(props) {
                 />
             </div>
             <div className="flex flex-wrap flex-col relative group justify-top items-top p-6">
-                <h1 className="cursor-default text-2xl md:text-4xl font-bold text-talon-darkbg dark:text-talon-lightbg">Hello, I'm <p className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Talon</p></h1>
+                <h1 className="cursor-default text-2xl md:text-4xl font-bold text-talon-darkbg dark:text-talon-lightbg">Hello, I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Talon</span></h1>
                 <span className="max-w-xs">
                     <p className="cursor-default text-sm font-bold text-talon-darkbg dark:text-talon-lightbg">Yes, you're visiting a furry's website. Don't blame me! You clicked the link...</p>
                 </span>
