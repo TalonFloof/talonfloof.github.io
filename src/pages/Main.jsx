@@ -7,6 +7,7 @@ export default function Main(properties) {
   console.log("That's great! It's always nice to see someone who's curious.");
   console.log("The full source code is actually publically avaiable at: https://github.com/TalonFox/talonfox.github.io");
   console.log("Feel free to use whatever you want, the code is under the Apache 2.0 License.");
+  document.querySelector("html").style = null;
   return (
     <>
       <TopBar {...properties}/>

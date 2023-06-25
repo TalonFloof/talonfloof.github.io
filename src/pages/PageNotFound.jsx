@@ -2,6 +2,7 @@ import TopBar from "../components/TopBar";
 import { Link } from "react-router-dom";
 
 export default function PageNotFound(properties) {
+    document.querySelector("html").style.overflow = "hidden";
     return (
         <>
             <div className="fixed top-0 left-0 right-0">
