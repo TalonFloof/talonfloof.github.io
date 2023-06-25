@@ -11,7 +11,7 @@ export default function Contact(properties) {
             <div className="pt-40 w-screen h-auto bg-gradient-to-b from-violet-500 to-blue-200">
             <section className="w-screen absolute flex flex-row justify-center items-center z-10 animate-fade-from-bottom">
                 <section className="relative group">
-                    <h1 className="select-none absolute inset-0 dark:blur-xl cursor-default text-4xl md:text-8xl font-bold text-talon-darkbg dark:text-talon-lightbg dark:animate-light-flicker">Contacts</h1>
+                    <h1 className="select-none absolute dark:blur-xl cursor-default text-6xl md:text-8xl font-bold text-talon-darkbg dark:text-talon-lightbg dark:animate-light-flicker">Contacts</h1>
                     <h1 className="select-none cursor-default text-6xl md:text-8xl font-bold text-talon-darkbg dark:text-talon-lightbg">Contacts</h1>
                 </section>
             </section>
