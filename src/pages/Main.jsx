@@ -1,13 +1,17 @@
 import TopBar from "../components/TopBar";
-import { Link } from "react-router-dom";
 import Meeeee from "../assets/meeeee.png";
 
-export default function Main(props) {
+export default function Main(properties) {
+  console.log("Oh haiiiiiiiiii :3");
+  console.log("I see your interested in how this site works?");
+  console.log("That's great! It's always nice to see someone who's curious.");
+  console.log("The full source code is actually publically avaiable at: https://github.com/TalonFox/talonfox.github.io");
+  console.log("Feel free to use whatever you want, the code is under the Apache 2.0 License.");
   return (
     <>
-      <TopBar />
-      <main>
-        <section className="flex flex-row justify-center items-center mt-4 mb-6 pb-6 md:mt-[5vh] gap-10 md:gap-24 xl:gap-32">
+      <TopBar {...properties}/>
+      <main className="animate-fade-from-bottom">
+        <section className="flex flex-col justify-center items-center md:flex-row mt-4 mb-6 pb-6 md:mt-[5vh] gap-10 md:gap-24 xl:gap-32">
             <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-blue-500 rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 blur-xl rotate-45"></div>
                 <img 

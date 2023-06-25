@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar(props) {
+export default function Navbar(properties) {
+  const { toggleDarkMode, darkMode } = properties;
   return (
     <>
       <nav className="flex justify-between items-center m-5">
@@ -12,6 +13,23 @@ export default function Navbar(props) {
           TalonFox
         </Link>
         <ul className="flex items-center gap-4">
+          <button
+            onClick={() => toggleDarkMode()}
+            id="theme-switch-button"
+            className={darkMode ? "transition ease-in-out duration-200 rotate-0"
+              : "transition ease-in-out duration-200 rotate-180"}
+          >
+          <svg
+              className="dark:text-talon-lightbg text-talon-darkbg transition-colors ease-in-out duration-200"
+              height="26"
+              width="26"
+              fill="currentColor"
+              viewBox="0 -960 960 960"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm20-60q137-10 228.5-106T820-480q0-138-91.5-234T500-820v680Z"/>              
+            </svg>
+            </button>
           <a href="https://github.com/TalonFox" target="_blank">
             <svg
               className="dark:text-talon-lightbg text-talon-darkbg transition-colors ease-in-out duration-200"
