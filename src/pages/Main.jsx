@@ -27,7 +27,7 @@ export default function Main(properties) {
             <div className="flex flex-wrap flex-col relative group justify-top items-top p-6 select-none">
                 <h1 className="cursor-default text-2xl md:text-4xl font-bold text-talon-darkbg dark:text-talon-lightbg">Hello, I'm <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-blue-500">Talon</span></h1>
                 <span className="max-w-xs">
-                    <p className="cursor-default text-sm font-bold text-talon-darkbg dark:text-talon-lightbg">I am a self-taught programmer who is particularly interested in baremetal coding.</p>
+                    <p className="cursor-default text-sm font-bold text-talon-darkbg dark:text-talon-lightbg">I am a self-taught programmer who is particularly interested in baremetal software development.</p>
                     <p className="cursor-default text-xs text-talon-darkbg dark:text-talon-lightbg">Yes, this is a furry's website. Just remember that it was your decision to visit this site.</p>
                 </span>
             </div>
